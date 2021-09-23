@@ -1,0 +1,54 @@
+$(document).ready(function(){
+
+	var navbar = $('.nav-sec');
+	var logo = $('.navbar .logo span');
+
+	navbar.removeClass('white');
+			navbar.addClass('bg1');
+
+	$(window).scroll(function(){
+
+		let scrollTop = $(window).scrollTop();
+
+		if(scrollTop > 0){
+				navbar.removeClass('bg1');
+				navbar.addClass('white');
+				navbar.addClass('shadow1');
+				logo.addClass('logoScrolled');
+
+		}else{
+			navbar.removeClass('white');
+			navbar.removeClass('shadow1');
+			logo.removeClass('logoScrolled');
+			navbar.addClass('bg1');
+		}
+
+	});
+
+
+	let oneRightImg = $('.one .right img');
+
+	let oneRightImgW = oneRightImg.width();
+
+	let getHeight = oneRightImgW / 3;
+
+	getHeight = getHeight * 2;
+
+	oneRightImg.css('height',getHeight + 'px');
+
+
+
+	// let rowThreeSqr = $('.three .sqr');
+
+	// let rowThreeSqrW = rowThreeSqr.width();
+
+	// rowThreeSqr.css('height',rowThreeSqrW + 'px');
+
+	let rowFourTestiImg = $('.four .client-card .testiImg');
+
+	let rowFourTestiImgH = rowFourTestiImg.height();
+
+	rowFourTestiImg.css('height',rowFourTestiImgH + 'px');
+
+
+});
